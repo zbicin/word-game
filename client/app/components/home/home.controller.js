@@ -1,6 +1,8 @@
 class HomeController {
-  constructor() {
-    this.name = 'home';
+  constructor(Player) {
+    "ngInject";
+
+    this.playerName = Player.name;
   }
 }
 

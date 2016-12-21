@@ -1,9 +1,13 @@
-<navbar></navbar>
-<header>
-  <hero></hero>
-</header>
-<main>
-  <div>
-    <h1>Found in {{ $ctrl.name }}.html</h1>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <form ng-submit="$ctrl.savePlayerName()" role="form">
+      <legend>What is your name?</legend>
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="" placeholder="Input field" ng-model="$ctrl.playerName">
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">I'm ready!</button>
+    </form>
   </div>
-</main>
+</div>
