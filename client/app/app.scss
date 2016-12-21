@@ -1,8 +1,7 @@
 @import "common/common";
 @import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 
-.app {
+html, body, .app {
   height: 100%;
-  background-color: $lightBgColor;
+  min-height: 100%;
 }
-
