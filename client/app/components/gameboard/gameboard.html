@@ -1,8 +1,20 @@
 <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
+
         <p>
-            Welcome, {{ $ctrl.playerName }}!
+            Welcome, {{ $ctrl.playerName }}! Your score: {{ $ctrl.score }}. Remaining time: {{ $ctrl.remainingTime }}.
         </p>
+
+        <div class="form-group">
+            <label for="originalWord">Original word</label>
+            <input disabled readonly type="text" class="form-control" id="originalWord" ng-model="$ctrl.currentMangledWord" placeholder="">
+        </div>
+    
+        <div class="form-group">
+            <label for="answer">Your answer</label>
+            <input type="text" class="form-control" id="answer" ng-model="$ctrl.currentAnswer" placeholder="Your answer" ng-change="$ctrl.onAnswerChange($ctrl.currentAnswer)">
+        </div>
+
         <button ng-click="$ctrl.proceed()" class="btn btn-success">
             Simulate win
         </button>

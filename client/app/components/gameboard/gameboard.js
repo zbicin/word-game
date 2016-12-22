@@ -1,10 +1,12 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import gameboardComponent from './gameboard.component';
+import Game from '../../common/game/game';
 import Player from '../../common/player/player';
 
 let gameboardModule = angular.module('gameboard', [
   uiRouter,
+  Game,
   Player
 ])
 
