@@ -6,10 +6,12 @@ const WORDS = [
 
 class WordBankService {
     constructor(Helpers) {
+        "ngInject";
+
         this.currentWordIndex = 0;
         this.helpers = Helpers;
         this.words = this.helpers.shuffleArray(WORDS)
-            .map(this.createOriginalAndMangledPair);
+            .map((singleWord) => this.createOriginalAndMangledPair(singleWord));
     }
 
     createOriginalAndMangledPair(singleWord) {
@@ -31,8 +33,8 @@ class WordBankService {
     }
 
     mangleWord(word) {
-        return this.helpers.shuffleArray(word.split()).join();
+        return this.helpers.shuffleArray(word.split('')).join('');
     }
 }
 
-export default WordBank;
+export default WordBankService;

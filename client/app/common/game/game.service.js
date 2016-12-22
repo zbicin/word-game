@@ -3,6 +3,8 @@ const GAME_DURATION = 40 * 1000;
 class GameService {
     static TIME_IS_UP = 'GameService.timeIsUp';
     constructor($interval, Helpers, WordBank) {
+        "ngInject";
+
         this.currentAnswer = '';
         this.helpers = Helpers;
         this.previousAnswer = null;
@@ -11,7 +13,7 @@ class GameService {
 
         this.currentWord = WordBank.getNextWord();
         // TODO: cancel the interval when appropriate
-        this.tickIntervalHandle = $interval(this.onTick, 1000);
+        this.tickIntervalHandle = $interval(() => this.onTick(), 1000);
     }
 
     get isAnswerCorrect() {
