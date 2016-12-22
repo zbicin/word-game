@@ -5,7 +5,7 @@ let HelpersFactory = () => {
         },
 
         shuffleArray: (array) => {
-            let result = array.splice();
+            let result = array.slice(0);
 
             // adapted from http://stackoverflow.com/a/6274381/6696238
             for (let i = result.length; i; i--) {

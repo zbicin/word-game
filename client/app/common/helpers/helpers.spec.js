@@ -37,5 +37,14 @@ describe('Helpers', () => {
 
             expect(shuffled).not.to.eql(source);
         });
+
+        it('produces shuffled array of proper length', () => {
+            let source = [ 1, 2, 3 ];
+            
+            let shuffled = factory.shuffleArray(source);
+            
+            expect(shuffled.length).to.eq(source.length);
+            expect(shuffled.length).not.to.eq(0);
+        })
     });
 });
