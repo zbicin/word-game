@@ -1,8 +1,13 @@
 class GameboardController {
-  constructor(Player) {
+  constructor(Player, $state) {
     "ngInject";
 
+    this.$state = $state;
     this.playerName = Player.name;
+  }
+
+  proceed() {
+    this.$state.go('scoreboard');
   }
 }
 

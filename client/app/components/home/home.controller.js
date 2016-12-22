@@ -2,8 +2,8 @@ class HomeController {
   constructor(Player, $state) {
     "ngInject";
 
-    this.playerName = Player.name;
     this.$state = $state;
+    this.playerName = Player.name;
   }
 
   savePlayerName($event) {
