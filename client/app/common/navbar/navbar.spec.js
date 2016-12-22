@@ -41,8 +41,8 @@ describe('Navbar', () => {
       scope.$apply();
     });
 
-    it('has name in template', () => {
-      expect(template.find('h1').find('a').html()).to.eq('navbar');
+    it('displays three links', () => {
+      expect(template.find('ul').children().length).to.eq(3);
     });
 
   });

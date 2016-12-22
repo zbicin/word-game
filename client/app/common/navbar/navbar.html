@@ -1,8 +1,14 @@
-<nav class="navbar">
-  <div class="logo">
-    <h1><a ui-sref="home">{{ $ctrl.name }}</a></h1>
-  </div>
-  <div class="nav-links">
-    <span><a ui-sref="about">about</a></span>
-  </div>
-</nav>
+<div class="navbar">
+  <a class="navbar-brand" ui-sref="home">Word Game</a>
+  <ul class="nav navbar-nav">
+    <li>
+      <a ui-sref="home">Welcome</a>
+    </li>
+    <li>
+      <a ui-sref="gameboard">Gameboard</a>
+    </li>
+    <li>
+      <a ui-sref="scoreboard">Scoreboard</a>
+    </li>
+  </ul>
+</div>
