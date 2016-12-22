@@ -29,5 +29,13 @@ describe('Helpers', () => {
 
             expect(result).to.eq(expectedResult);
         });
+
+        it('shuffles arrays', () => {
+            let source = [ 1, 2, 3 ];
+            
+            let shuffled = factory.shuffleArray(source);
+
+            expect(shuffled).not.to.eql(source);
+        });
     });
 });
