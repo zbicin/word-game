@@ -25,9 +25,11 @@ let GlobalEvents = () => {
             };
         },
         trigger: (eventName, data) => {
-            events[eventName].forEach((singleHandler) => {
-                singleHandler.callback(data);
-            });
+            if (events[eventName]) {
+                events[eventName].forEach((singleHandler) => {
+                    singleHandler.callback(data);
+                });
+            }
         }
     };
 }
