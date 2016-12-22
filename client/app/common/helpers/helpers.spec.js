@@ -10,6 +10,16 @@ describe('Helpers', () => {
     }));
 
     describe('Factory', () => {
+        it('subtracts values', () => {
+            let what = 1;
+            let from = 3;
+            let expectedResult = 2;
+
+            let result = factory.safeSubtract(what, from);
+
+            expect(result).to.eq(expectedResult);
+        });
+        
         it('subtracts down to 0 only', () => {
             let what = 3;
             let from = 1;
