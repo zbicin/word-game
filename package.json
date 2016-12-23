@@ -29,6 +29,8 @@
     "gulp-template": "^3.0.0",
     "gulp-util": "^3.0.7",
     "html-webpack-plugin": "^1.7.0",
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.4",
     "karma": "^0.13.22",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.2.0",
@@ -55,6 +57,7 @@
   "scripts": {
     "build": "gulp webpack",
     "component": "gulp component",
+    "lint": "jshint -c .jshintrc client && jscs -c .jscsrc client",
     "serve": "gulp serve",
     "start": "gulp serve",
     "test": "karma start",
