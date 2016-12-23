@@ -16,9 +16,8 @@ class GameService {
         this.currentWord = '';
         this.globalEvents = GlobalEvents;
         this.helpers = Helpers;
-        this.playerName = '';
         this.previousAnswer = null;
-        this.remainingSeconds = 0;
+        this.remainingSeconds = null;
         this.tickIntervalHandle = null;
         this.wordBank = WordBank;
     }
@@ -29,6 +28,10 @@ class GameService {
 
     get isAnswerCorrect() {
         return this.currentAnswer === this.currentWord.original;
+    }
+
+    get isFinished() {
+        return !this.isActive && this.isTimeUp;
     }
 
     get isTimeUp() {
@@ -80,6 +83,7 @@ class GameService {
         this.tickIntervalHandle = this.$interval(() => this.onTick(), 1000);
 
         this.globalEvents.trigger(this.NEW_WORD, this.currentWord);
+        this.globalEvents.trigger(this.SCORE_UPDATED, this.score);
         this.globalEvents.trigger(this.TIME_UPDATED, this.remainingSeconds);
     }
 

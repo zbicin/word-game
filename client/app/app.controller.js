@@ -10,6 +10,10 @@ class AppController {
     return this.game.isActive;
   }
 
+  get isGameFinished() {
+    return this.game.isFinished;
+  }
+
   get isPlayerDefined() {
       return !!this.game.playerName;
   }
