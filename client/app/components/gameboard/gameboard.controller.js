@@ -32,6 +32,7 @@ class GameboardController {
   onNewWord(newWord) {
     this.currentAnswer = '';
     this.currentMangledWord = newWord.mangled;
+    console.log(`Psst, the answer is: ${newWord.original}.`);
   }
 
   onTimeIsUp() {
