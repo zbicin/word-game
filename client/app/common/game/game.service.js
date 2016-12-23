@@ -15,6 +15,7 @@ class GameService {
         this.currentAnswer = '';
         this.globalEvents = GlobalEvents;
         this.helpers = Helpers;
+        this.playerName = '';
         this.previousAnswer = null;
         this.remainingSeconds = GAME_DURATION_IN_SECODS;
         this.score = 0;

@@ -1,11 +1,11 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import homeComponent from './home.component';
-import Player from '../../common/player/player';
+import Game from '../../common/game/game';
 
 let homeModule = angular.module('home', [
   uiRouter,
-  Player
+  Game
 ])
 
 .config(($stateProvider, $urlRouterProvider) => {

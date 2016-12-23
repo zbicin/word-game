@@ -1,12 +1,12 @@
 class GameboardController {
-  constructor($state, Game, GlobalEvents, Player) {
+  constructor($state, Game, GlobalEvents) {
     "ngInject";
 
     this.$state = $state;
     this.currentAnswer = '';
     this.currentMangledWord = Game.currentWord.mangled;
     this.game = Game;
-    this.playerName = Player.name;
+    this.playerName = Game.playerName;
     this.remainingTime = Game.remainingSeconds;
     this.score = 0;
     GlobalEvents.on(Game.NEW_WORD, (newWord) => this.onNewWord(newWord));
