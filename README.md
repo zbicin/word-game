@@ -13,4 +13,12 @@ Are you brave enough to pick up the challenge?
 
 ---
 
-A simple game prepared with Angular 1, Webpack and ES6. Based on the [NG6-starter](https://github.com/AngularClass/NG6-starter) by AngularClass. 
+A simple game prepared with Angular 1, Webpack and ES6. Based on the [NG6-starter](https://github.com/AngularClass/NG6-starter) by AngularClass.
+
+How to run?
+```
+git clone https://github.com/zbicin/word-game.git
+cd word-game
+npm install
+npm start
+``` 
