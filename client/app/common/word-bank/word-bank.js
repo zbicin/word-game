@@ -4,8 +4,8 @@ import WordBankService from './word-bank.service';
 
 let wordBankModule = angular.module('wordBank', [helpersModule])
 
-.service('WordBank', WordBankService)
+  .service('WordBank', WordBankService)
 
-.name;
+  .name;
 
 export default wordBankModule;

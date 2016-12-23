@@ -3,8 +3,8 @@ import GlobalEventsFactory from './global-events.factory';
 
 let globalEventsModule = angular.module('globalEvents', [])
 
-.factory('GlobalEvents', GlobalEventsFactory)
+  .factory('GlobalEvents', GlobalEventsFactory)
 
-.name;
+  .name;
 
 export default globalEventsModule;

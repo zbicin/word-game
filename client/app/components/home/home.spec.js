@@ -1,4 +1,6 @@
-import HomeModule from './home'
+/*jshint expr: true*/
+
+import HomeModule from './home';
 
 describe('Home', () => {
   let $rootScope, $location, $componentController, $compile;

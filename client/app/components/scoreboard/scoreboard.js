@@ -3,8 +3,8 @@ import scoreboardComponent from './scoreboard.component';
 
 let scoreboardModule = angular.module('scoreboard', [])
 
-.component('scoreboard', scoreboardComponent)
+  .component('scoreboard', scoreboardComponent)
 
-.name;
+  .name;
 
 export default scoreboardModule;

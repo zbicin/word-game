@@ -3,8 +3,8 @@ import HelpersFactory from './helpers.factory';
 
 let helpersModule = angular.module('helpers', [])
 
-.factory('Helpers', HelpersFactory)
+  .factory('Helpers', HelpersFactory)
 
-.name;
+  .name;
 
 export default helpersModule;

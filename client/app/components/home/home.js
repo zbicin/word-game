@@ -6,8 +6,8 @@ let homeModule = angular.module('home', [
   Game
 ])
 
-.component('home', homeComponent)
-  
-.name;
+  .component('home', homeComponent)
+
+  .name;
 
 export default homeModule;

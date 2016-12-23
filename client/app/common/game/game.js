@@ -5,13 +5,13 @@ import wordBankModule from '../word-bank/word-bank';
 import GameService from './game.service';
 
 let gameModule = angular.module('game', [
-    globalEventsModule,
-    helpersModule,
-    wordBankModule
+  globalEventsModule,
+  helpersModule,
+  wordBankModule
 ])
 
-.service('Game', GameService)
+  .service('Game', GameService)
 
-.name;
+  .name;
 
 export default gameModule;

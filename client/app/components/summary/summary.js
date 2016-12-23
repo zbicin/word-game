@@ -3,8 +3,8 @@ import summaryComponent from './summary.component';
 
 let summaryModule = angular.module('summary', [])
 
-.component('summary', summaryComponent)
+  .component('summary', summaryComponent)
 
-.name;
+  .name;
 
 export default summaryModule;

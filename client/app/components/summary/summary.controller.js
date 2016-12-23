@@ -1,7 +1,7 @@
 class SummaryController {
   constructor(Game) {
-    "ngInject";
-    
+    'ngInject';
+
     this.game = Game;
   }
 

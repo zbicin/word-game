@@ -1,6 +1,6 @@
 class HomeController {
   constructor(Game) {
-    "ngInject";
+    'ngInject';
     this.game = Game;
 
     this.playerName = '';
@@ -8,7 +8,7 @@ class HomeController {
 
   startGame($event) {
     $event.preventDefault();
-    
+
     this.game.playerName = this.playerName;
     this.game.start();
   }

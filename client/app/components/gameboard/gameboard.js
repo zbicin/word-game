@@ -6,8 +6,8 @@ let gameboardModule = angular.module('gameboard', [
   Game
 ])
 
-.component('gameboard', gameboardComponent)
-  
-.name;
+  .component('gameboard', gameboardComponent)
+
+  .name;
 
 export default gameboardModule;

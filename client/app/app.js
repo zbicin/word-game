@@ -5,8 +5,8 @@ import AppComponent from './app.component';
 import 'normalize.css';
 
 angular.module('app', [
-    Common,
-    Components
-  ])
-  
+  Common,
+  Components
+])
+
   .component('app', AppComponent);

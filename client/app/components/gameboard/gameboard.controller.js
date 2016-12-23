@@ -1,6 +1,6 @@
 class GameboardController {
   constructor(Game, GlobalEvents) {
-    "ngInject";
+    'ngInject';
 
     this.currentAnswer = '';
     this.currentMangledWord = Game.currentWord.mangled;

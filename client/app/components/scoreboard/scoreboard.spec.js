@@ -1,4 +1,4 @@
-import ScoreboardModule from './scoreboard'
+import ScoreboardModule from './scoreboard';
 import ScoreboardController from './scoreboard.controller';
 import ScoreboardComponent from './scoreboard.component';
 import ScoreboardTemplate from './scoreboard.html';
@@ -28,15 +28,15 @@ describe('Scoreboard', () => {
   });
 
   describe('Component', () => {
-      // component/directive specs
-      let component = ScoreboardComponent;
+    // component/directive specs
+    let component = ScoreboardComponent;
 
-      it('includes the intended template',() => {
-        expect(component.template).to.equal(ScoreboardTemplate);
-      });
+    it('includes the intended template', () => {
+      expect(component.template).to.equal(ScoreboardTemplate);
+    });
 
-      it('invokes the right controller', () => {
-        expect(component.controller).to.equal(ScoreboardController);
-      });
+    it('invokes the right controller', () => {
+      expect(component.controller).to.equal(ScoreboardController);
+    });
   });
 });

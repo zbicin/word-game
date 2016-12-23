@@ -1,6 +1,6 @@
 class AppController {
   constructor(Game) {
-    "ngInject";
+    'ngInject';
 
     this.game = Game;
     this.playerName = Game.playerName;
@@ -15,7 +15,7 @@ class AppController {
   }
 
   get isPlayerDefined() {
-      return !!this.game.playerName;
+    return !!this.game.playerName;
   }
 }
 

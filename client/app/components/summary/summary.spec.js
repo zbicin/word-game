@@ -1,4 +1,4 @@
-import SummaryModule from './summary'
+import SummaryModule from './summary';
 import SummaryController from './summary.controller';
 import SummaryComponent from './summary.component';
 import SummaryTemplate from './summary.html';
@@ -28,15 +28,15 @@ describe('Summary', () => {
   });
 
   describe('Component', () => {
-      // component/directive specs
-      let component = SummaryComponent;
+    // component/directive specs
+    let component = SummaryComponent;
 
-      it('includes the intended template',() => {
-        expect(component.template).to.equal(SummaryTemplate);
-      });
+    it('includes the intended template', () => {
+      expect(component.template).to.equal(SummaryTemplate);
+    });
 
-      it('invokes the right controller', () => {
-        expect(component.controller).to.equal(SummaryController);
-      });
+    it('invokes the right controller', () => {
+      expect(component.controller).to.equal(SummaryController);
+    });
   });
 });

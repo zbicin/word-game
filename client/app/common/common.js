@@ -10,7 +10,7 @@ let commonModule = angular.module('app.common', [
   Helpers,
   WordBank
 ])
-  
-.name;
+
+  .name;
 
 export default commonModule;
