@@ -1,8 +1,4 @@
-const WORDS = [
-  'pizza',
-  'cat',
-  'dog'
-];
+import dummyWords from './dummy-word-list.json';
 
 class WordBankService {
   constructor(Helpers) {
@@ -10,7 +6,7 @@ class WordBankService {
 
     this.currentWordIndex = 0;
     this.helpers = Helpers;
-    this.words = this.helpers.shuffleArray(WORDS)
+    this.words = this.helpers.shuffleArray(dummyWords)
       .map((singleWord) => this.createOriginalAndMangledPair(singleWord));
   }
 
