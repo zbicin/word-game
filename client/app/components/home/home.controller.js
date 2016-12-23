@@ -1,16 +1,16 @@
 class HomeController {
-  constructor(Game, $state) {
+  constructor(Game) {
     "ngInject";
-
-    this.$state = $state;
     this.game = Game;
-    this.playerName = Game.playerName;
+
+    this.playerName = '';
   }
 
-  savePlayerName($event) {
+  startGame($event) {
     $event.preventDefault();
+    
     this.game.playerName = this.playerName;
-    this.$state.go('gameboard');
+    this.game.start();
   }
 }
 

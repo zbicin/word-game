@@ -13,20 +13,18 @@ class GameService {
         this.$interval = $interval;
 
         this.currentAnswer = '';
+        this.currentWord = '';
         this.globalEvents = GlobalEvents;
         this.helpers = Helpers;
         this.playerName = '';
         this.previousAnswer = null;
-        this.remainingSeconds = GAME_DURATION_IN_SECODS;
-        this.score = 0;
+        this.remainingSeconds = 0;
+        this.tickIntervalHandle = null;
         this.wordBank = WordBank;
+    }
 
-        this.currentWord = this.wordBank.getNextWord();
-        this.score = this.calculateMaximumScoreForWord(this.currentWord.original);
-        this.globalEvents.trigger(this.NEW_WORD, this.currentWord);
-        this.globalEvents.trigger(this.TIME_UPDATED, this.remainingSeconds);
-        // TODO: cancel the interval when appropriate
-        this.tickIntervalHandle = $interval(() => this.onTick(), 1000);
+    get isActive() {
+        return !!this.tickIntervalHandle;
     }
 
     get isAnswerCorrect() {
@@ -48,6 +46,7 @@ class GameService {
         if (this.isTimeUp) {
             this.globalEvents.trigger(this.TIME_IS_UP, this.score);
             this.$interval.cancel(this.tickIntervalHandle);
+            this.tickIntervalHandle = null;
         }
     }
 
@@ -71,6 +70,17 @@ class GameService {
         }
 
         this.globalEvents.trigger(this.SCORE_UPDATED, this.score);
+    }
+
+    start() {
+        this.currentWord = this.wordBank.getNextWord();
+        this.remainingSeconds = GAME_DURATION_IN_SECODS;
+        this.score = this.calculateMaximumScoreForWord(this.currentWord.original);
+        // TODO: cancel the interval when appropriate
+        this.tickIntervalHandle = this.$interval(() => this.onTick(), 1000);
+
+        this.globalEvents.trigger(this.NEW_WORD, this.currentWord);
+        this.globalEvents.trigger(this.TIME_UPDATED, this.remainingSeconds);
     }
 
 }

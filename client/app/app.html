@@ -1,5 +1,6 @@
 <!-- Place all UI elements intended to be present across all routes in this file -->
 <div class="app">
-  <navbar></navbar>
-  <div ui-view></div>
+  <home ng-hide="$ctrl.isPlayerDefined"></home>
+  <gameboard ng-hide="!$ctrl.isGameActive"></gameboard>
+  <scoreboard ng-hide="$ctrl.isGameActive"></scoreboard>
 </div>

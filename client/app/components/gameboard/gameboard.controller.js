@@ -1,8 +1,7 @@
 class GameboardController {
-  constructor($state, Game, GlobalEvents) {
+  constructor(Game, GlobalEvents) {
     "ngInject";
 
-    this.$state = $state;
     this.currentAnswer = '';
     this.currentMangledWord = Game.currentWord.mangled;
     this.game = Game;
@@ -29,7 +28,7 @@ class GameboardController {
   }
 
   onTimeIsUp() {
-    this.$state.go('scoreboard');
+    // TODO
   }
 
   onTimeUpdated(newTime) {
