@@ -1,4 +1,4 @@
-const GAME_DURATION_IN_SECODS = 10;
+const GAME_DURATION_IN_SECODS = 40;
 
 class GameService {
 
