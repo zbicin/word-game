@@ -57,6 +57,7 @@
   "scripts": {
     "build": "gulp webpack",
     "component": "gulp component",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
     "lint": "jshint -c .jshintrc client && jscs -c .jscsrc client",
     "serve": "gulp serve",
     "start": "gulp serve",
