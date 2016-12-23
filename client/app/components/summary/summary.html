@@ -1,3 +1,4 @@
-<h1>Game over</h1>
-<h3>Your score is: {{ $ctrl.score }}.</h3>
+<h4>Time is up! Your score is {{ $ctrl.score }}.</h4>
+<p>Great job {{ $ctrl.playerName }}, you were able to get {{ $ctrl.score }} points.</p>
+<p>Go ahead and try to improve the result:</p>
 <button class="btn btn-info" ng-click="$ctrl.tryAgain()">Try again</button>

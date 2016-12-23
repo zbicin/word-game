@@ -5,6 +5,10 @@ class SummaryController {
     this.game = Game;
   }
 
+  get playerName() {
+    return this.game.playerName;
+  }
+
   get score() {
     return this.game.score;
   }

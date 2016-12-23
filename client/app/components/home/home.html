@@ -1,13 +1,19 @@
-<div class="row">
-  <div class="col-sm-8 col-sm-offset-2">
-    <form ng-submit="$ctrl.startGame($event)" role="form">
-      <legend>What is your name?</legend>
-
-      <div class="form-group">
-        <input type="text" class="form-control" id="" placeholder="Input field" ng-model="$ctrl.playerName">
-      </div>
-
-      <button type="submit" class="btn btn-primary btn-block">I'm ready!</button>
-    </form>
+<p>
+  You'll be shown mangled words and your task is to guess what was the original word.
+</p>
+<p>
+  You have 40 seconds and for each correct answer you get points - the longer the word the more points you can earn. However,
+  for each character removed you loose 1 point, so be aware not to make too much mistakes!
+</p>
+<p>
+  Are you brave enough to pick up the challenge?
+</p>
+<form ng-submit="$ctrl.startGame($event)" role="form">
+  <div class="form-group">
+    <input type="text" class="form-control" ng-focus="true" placeholder="What is your name?" ng-model="$ctrl.playerName">
   </div>
-</div>
+
+  <button type="submit" class="btn btn-primary btn-block" ng-disabled="!$ctrl.playerName">
+    I'm ready, let's go!
+  </button>
+</form>

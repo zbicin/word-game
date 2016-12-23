@@ -13,6 +13,10 @@ class GameboardController {
     GlobalEvents.on(Game.TIME_IS_UP, () => this.onTimeIsUp());
   }
 
+  get isGameActive() {
+    return this.game.isActive;
+  }
+
   get playerName() {
     return this.game.playerName;
   }
