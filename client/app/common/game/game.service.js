@@ -18,6 +18,7 @@ class GameService {
         this.helpers = Helpers;
         this.previousAnswer = null;
         this.remainingSeconds = null;
+        this.score = 0;
         this.tickIntervalHandle = null;
         this.wordBank = WordBank;
     }
@@ -78,7 +79,7 @@ class GameService {
     start() {
         this.currentWord = this.wordBank.getNextWord();
         this.remainingSeconds = GAME_DURATION_IN_SECODS;
-        this.score = this.calculateMaximumScoreForWord(this.currentWord.original);
+        this.score = 0;
         // TODO: cancel the interval when appropriate
         this.tickIntervalHandle = this.$interval(() => this.onTick(), 1000);
 
